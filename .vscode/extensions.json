@@ -1,3 +1,9 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "Vue.volar",
+    "esbenp.prettier-vscode",
+    "antfu.theme-vitesse",
+    "PKief.material-icon-theme",
+    "Gruntfuggly.todo-tree"
+  ]
 }
