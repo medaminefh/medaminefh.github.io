@@ -23,7 +23,6 @@
     "@typescript-eslint/no-unused-vars": 0,
     "unused-imports/no-unused-imports": "error",
     "vue/require-default-prop": "off",
-    //"@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-explicit-any": ["off"],
     "unused-imports/no-unused-vars": 0
 
