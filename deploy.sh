@@ -17,6 +17,7 @@ echo > .nojekyll
 
 git init
 git checkout -B main
+git config user.email "fhal.mohamed.amine@gmail.com"
 git add -A
 git commit -m 'deploy'
 
