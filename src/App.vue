@@ -41,8 +41,28 @@ const changePage = (page: "about" | "work" | "contact") => {
     </li>
   </ul>
   <div class="px-10 py-8 w-screen">
-    <About v-if="currentPage === 'about'" />
-    <Work v-if="currentPage === 'work'" />
-    <Contact v-if="currentPage === 'contact'" />
+    <TransitionGroup>
+      <About v-if="currentPage === 'about'" />
+      <Work v-if="currentPage === 'work'" />
+      <Contact v-if="currentPage === 'contact'" />
+    </TransitionGroup>
   </div>
 </template>
+
+<style>
+.v-enter-from {
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+.v-leave-to {
+  position: absolute;
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
+}
+</style>
