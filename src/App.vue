@@ -4,8 +4,9 @@ import Work from "@/components/work.vue";
 import Contact from "@/components/contact.vue";
 import { ref } from "vue";
 
-const currentPage = ref<"about" | "work" | "contact">("about");
-const changePage = (page: "about" | "work" | "contact") => {
+const currentPage = ref<"About" | "Work" | "Contact">("About");
+const components = { About, Work, Contact };
+const changePage = (page: "About" | "Work" | "Contact") => {
   currentPage.value = page;
 };
 </script>
@@ -13,28 +14,28 @@ const changePage = (page: "about" | "work" | "contact") => {
 <template>
   <ul class="w-screen flex items-center justify-center gap-x-20 py-8">
     <li
-      @click="changePage('about')"
+      @click="changePage('About')"
       :class="[
         'px-2 hover:text-purple-300 cursor-pointer',
-        currentPage === 'about' && 'text-purple-500',
+        currentPage === 'About' && 'text-purple-500',
       ]"
     >
       About
     </li>
     <li
-      @click="changePage('work')"
+      @click="changePage('Work')"
       :class="[
         'px-2 hover:text-purple-300 cursor-pointer',
-        currentPage === 'work' && 'text-purple-500',
+        currentPage === 'Work' && 'text-purple-500',
       ]"
     >
       Work
     </li>
     <li
-      @click="changePage('contact')"
+      @click="changePage('Contact')"
       :class="[
         'px-2 hover:text-purple-300 cursor-pointer',
-        currentPage === 'contact' && 'text-purple-500',
+        currentPage === 'Contact' && 'text-purple-500',
       ]"
     >
       Contact
@@ -42,9 +43,7 @@ const changePage = (page: "about" | "work" | "contact") => {
   </ul>
   <div class="px-10 py-8 w-screen">
     <TransitionGroup>
-      <About v-if="currentPage === 'about'" />
-      <Work v-if="currentPage === 'work'" />
-      <Contact v-if="currentPage === 'contact'" />
+      <component :is="components[currentPage]" :key="currentPage" />
     </TransitionGroup>
   </div>
 </template>
