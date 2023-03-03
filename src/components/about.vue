@@ -1,7 +1,16 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 
-const blogs = ref([]);
+interface Blog {
+  id: string;
+  title: string;
+  cover_image: string;
+  created_at: string;
+  url: string;
+  description: string;
+}
+
+const blogs = ref<Blog[]>([]);
 function differenceInMonths(date1: string, date2?: string) {
   const d1 = new Date(date1);
   const d2 = date2 ? new Date(date2) : new Date();
@@ -19,7 +28,11 @@ onMounted(async () => {
   try {
     const data = await fetch("https://dev.to/api/articles?username=medaminefh");
     const jsonData = await data.json();
-    const options = { year: "numeric", month: "short", day: "numeric" };
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
     blogs.value = jsonData.map((blog: any) => ({
       id: blog.id,
       title: blog.title,
