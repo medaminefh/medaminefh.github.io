@@ -49,6 +49,9 @@ const changePage = (page: "About" | "Work" | "Contact") => {
       <component :is="components[currentPage]" :key="currentPage" />
     </TransitionGroup>
   </div>
+  <div class="flex p-4 justify-center items-center">
+    <p>&copy;medaminefh {{ new Date().getUTCFullYear() }}</p>
+  </div>
 </template>
 
 <style>
