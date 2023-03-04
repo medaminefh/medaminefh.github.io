@@ -10,13 +10,18 @@ interface Blog {
   description: string;
 }
 
+// type-based
+const emit = defineEmits<{
+  (e: "changePage", page: string): void;
+}>();
+
 const blogs = ref<Blog[]>([]);
 function differenceInMonths(date1: string, date2?: string) {
   const d1 = new Date(date1);
   const d2 = date2 ? new Date(date2) : new Date();
   const monthDiff = d2.getMonth() - d1.getMonth();
   const yearDiff = d2.getFullYear() - d1.getFullYear();
-  const months = monthDiff + yearDiff * 12;
+  const months = monthDiff + 1 + yearDiff * 12;
 
   if (yearDiff > 0 && monthDiff > 0) {
     return `~${Math.floor(months / 12)} Year(s), ${months % 12} Month(s)`;
@@ -163,6 +168,12 @@ const state = {
             <p class="text-gray-500">
               Mohamed Amine Fhal, a self-taught developer, and as any
               self-taught always seeking to learn.
+              <button
+                class="text-purple-500 hover:underline"
+                @click="emit('changePage', 'Contact')"
+              >
+                get in touch!
+              </button>
             </p>
           </div>
         </div>
@@ -307,7 +318,7 @@ const state = {
                 <div v-for="(blog, index) in blogs.slice(1)" :key="index">
                   <div class="overflow-hidden">
                     <img
-                      class="w-full md:hover:scale-125 ease-in duration-300"
+                      class="w-full md:hover:scale-110 ease-in duration-300"
                       :src="blog?.cover_image"
                       :alt="blog?.title"
                     />

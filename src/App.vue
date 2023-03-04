@@ -46,7 +46,11 @@ const changePage = (page: "About" | "Work" | "Contact") => {
 
   <div class="px-10 py-8 w-full">
     <TransitionGroup>
-      <component :is="components[currentPage]" :key="currentPage" />
+      <component
+        @changePage="changePage"
+        :is="components[currentPage]"
+        :key="currentPage"
+      />
     </TransitionGroup>
   </div>
   <div class="flex p-4 justify-center items-center">
@@ -54,7 +58,7 @@ const changePage = (page: "About" | "Work" | "Contact") => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .v-enter-from {
   transform: translateX(-300px);
   opacity: 0;
