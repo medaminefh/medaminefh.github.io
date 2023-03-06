@@ -151,7 +151,7 @@ const state = {
       <div class="space-y-6 w-full">
         <div class="flex flex-col md:flex-row gap-6 items-center">
           <div
-            class="rounded-full overflow-hidden border border-cyan-500 w-44 h-44"
+            class="rounded-full overflow-hidden border border-cyan-500 w-44 h-44 md:hover:shadow-cyan-200 md:shadow-xl ease-in duration-100 shadow-cyan-200 shadow-lg"
           >
             <img
               loading="lazy"
@@ -161,8 +161,21 @@ const state = {
             />
           </div>
           <div class="flex flex-col gap-y-2 max-w-lg">
-            <h3 class="text-xl font-semibold text-center md:text-start">
-              Software developer.
+            <h3
+              class="flex text-xl font-semibold md:justify-start justify-center gap-x-2"
+            >
+              <span>Software developer.</span
+              ><a
+                title="Resume"
+                class="group"
+                href="https://drive.google.com/uc?id=1n2h4DljRaSw98Lv_zen1dKewzl8UGueN"
+                target="_blank"
+                ><img
+                  loading="lazy"
+                  src="../assets/resume.svg"
+                  alt="resume"
+                  class="w-7 md:group-hover:scale-110"
+              /></a>
             </h3>
             <hr />
             <p class="text-gray-500">
