@@ -80,10 +80,18 @@ const projectsClone = computed(() =>
             <div
               class="hidden md:flex md:opacity-0 md:absolute top-0 right-0 md:group-hover:opacity-100 md:group-hover:-top-8 gap-x-3 ease-in duration-100 justify-end items-start"
             >
-              <a :href="project.ghRepo" target="_blank">
+              <a
+                :href="project.ghRepo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img class="w-9" src="../assets/githubLogo.svg"
               /></a>
-              <a v-show="project.url.length" :href="project.url" target="_blank"
+              <a
+                v-show="project.url.length"
+                :href="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img class="w-9" src="../assets/linkLogo.svg"
               /></a>
             </div>
@@ -93,10 +101,18 @@ const projectsClone = computed(() =>
             <p class="text-sm flex flex-col gap-y-2 items-start">
               <span>{{ project.desc }}</span>
               <span class="md:hidden flex gap-x-3 justify-end items-start">
-                <a :href="project.ghRepo">
+                <a
+                  :href="project.ghRepo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img class="w-6" src="../assets/githubLogo.svg"
                 /></a>
-                <a v-show="project.url.length" :href="project.url"
+                <a
+                  v-show="project.url.length"
+                  :href="project.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   ><img class="w-6" src="../assets/linkLogo.svg"
                 /></a>
               </span>

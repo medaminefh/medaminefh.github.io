@@ -157,25 +157,52 @@ const state = {
               loading="lazy"
               src="../assets/photo.jpg"
               alt="Mohamed amine fh photo"
-              class="w-44 bg-contain"
+              class="w-44"
             />
           </div>
           <div class="flex flex-col gap-y-2 max-w-lg">
             <h3
-              class="flex text-xl font-semibold md:justify-start justify-center gap-x-2"
+              class="flex flex-col md:flex-row text-xl font-semibold items-center gap-x-2"
             >
-              <span>Software developer.</span
-              ><a
-                title="Resume"
-                class="group"
-                href="https://drive.google.com/uc?id=1n2h4DljRaSw98Lv_zen1dKewzl8UGueN"
-                target="_blank"
-                ><img
-                  loading="lazy"
-                  src="../assets/resume.svg"
-                  alt="resume"
-                  class="w-7 md:group-hover:scale-110"
-              /></a>
+              <span>Software developer.</span>
+              <p class="flex gap-x-2 justify-center">
+                <a
+                  title="Resume"
+                  class="group"
+                  href="https://drive.google.com/uc?id=1n2h4DljRaSw98Lv_zen1dKewzl8UGueN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    loading="lazy"
+                    src="../assets/resume.svg"
+                    alt="resume"
+                    class="w-7 md:group-hover:scale-110"
+                /></a>
+                <a
+                  href="https://www.linkedin.com/in/mohamed-amine-fhal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    loading="lazy"
+                    src="../assets/linkedin.svg"
+                    alt="Linkedin logo"
+                    class="w-7 md:group-hover:scale-110"
+                  />
+                </a>
+                <a
+                  href="https://github.com/medaminefh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    loading="lazy"
+                    src="../assets/githubLogo.svg"
+                    alt="github logo"
+                    class="w-7 md:group-hover:scale-110"
+                  />
+                </a>
+              </p>
             </h3>
             <hr />
             <p class="text-gray-500">
