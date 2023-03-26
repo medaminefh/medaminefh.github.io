@@ -293,6 +293,7 @@ const state = {
           >
             <div>
               <img
+                v-if="blogs[0]?.cover_image"
                 class="w-full"
                 :src="blogs[0]?.cover_image"
                 :alt="blogs[0]?.title"
@@ -355,9 +356,10 @@ const state = {
               <div
                 class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8"
               >
-                <div v-for="(blog, index) in blogs.slice(1)" :key="index">
+                <div v-for="(blog, index) in blogs.slice(1, 15)" :key="index">
                   <div class="overflow-hidden">
                     <img
+                      v-if="blog?.cover_image"
                       class="w-full md:hover:scale-110 ease-in duration-300"
                       :src="blog?.cover_image"
                       :alt="blog?.title"
