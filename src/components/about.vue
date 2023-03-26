@@ -288,9 +288,7 @@ const state = {
           Check my latest blogs
         </h1>
         <div class="mt-12 lg:mt-24">
-          <div
-            class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8"
-          >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <img
                 v-if="blogs[0]?.cover_image"
@@ -298,7 +296,9 @@ const state = {
                 :src="blogs[0]?.cover_image"
                 :alt="blogs[0]?.title"
               />
-              <div class="py-4 px-8 w-full flex justify-between bg-indigo-700">
+              <div
+                class="py-4 px-4 md:px-8 w-full flex justify-between bg-indigo-700"
+              >
                 <p class="text-sm text-white font-semibold tracking-wide">
                   Mohamed Amine Fh
                 </p>
@@ -306,8 +306,12 @@ const state = {
                   {{ blogs[0]?.created_at }}
                 </p>
               </div>
-              <div class="bg-white px-10 py-6 rounded-bl-3xl rounded-br-3xl">
-                <h1 class="text-4xl text-gray-900 font-semibold tracking-wider">
+              <div
+                class="bg-white px-6 md:px-10 py-6 rounded-bl-3xl rounded-br-3xl"
+              >
+                <h1
+                  class="text-xl md:text-3xl text-gray-900 font-semibold tracking-wider"
+                >
                   {{ blogs[0]?.title }}
                 </h1>
                 <p
