@@ -148,17 +148,25 @@ const state = {
     <div
       class="flex flex-col gap-y-8 md:flex-row md:gap-x-8 divide-y-2 md:divide-x-2 md:divide-y-0 h-full"
     >
-      <div class="space-y-6 w-full">
+      <div class="space-y-6 w-full relative">
         <div class="flex flex-col md:flex-row gap-6 items-center">
           <div
-            class="rounded-full overflow-hidden border border-cyan-500 w-44 h-44 md:hover:shadow-cyan-200 md:shadow-xl ease-in duration-100 shadow-cyan-200 shadow-lg"
+            class="relative rounded-full border border-cyan-500 w-44 h-44 md:hover:shadow-cyan-200 md:shadow-xl ease-in duration-100 shadow-cyan-200 shadow-lg"
           >
             <img
               loading="lazy"
               src="../assets/photo.jpg"
               alt="Mohamed amine fh photo"
-              class="w-44"
+              class="w-44 rounded-full"
             />
+            <div class="absolute -top-10 -left-10 -z-10 w-64">
+              <img
+                src="../assets/illu-scalability.svg"
+                alt="illu-scalability"
+                loading="lazy"
+                class="w-64 animate-spin-slow"
+              />
+            </div>
           </div>
           <div class="flex flex-col gap-y-2 max-w-lg">
             <h3
@@ -206,8 +214,9 @@ const state = {
             </h3>
             <hr />
             <p class="text-gray-500">
-              Mohamed Amine Fhal, a self-taught developer, and as any
-              self-taught always seeking to learn.
+              Mohamed Amine Fhal, a self-taught developer, My passion for
+              technology has led me to learn various programming languages and
+              frameworks, always seeking to learn.
               <button
                 class="text-purple-500 hover:underline"
                 @click="emit('changePage', 'Contact')"
@@ -277,6 +286,20 @@ const state = {
             </p>
           </li>
         </ol>
+        <div class="absolute left-0 -bottom-50 md:left-20 -z-10">
+          <img
+            src="../assets/flexibility.svg"
+            alt="flexibility"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute -top-20 -right-10 -z-10 w-96 md:w-full h-96">
+          <img
+            src="https://www.algolia.com/doc/assets/images/home/pattern-f302b47d.svg"
+            alt="pattern"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
 

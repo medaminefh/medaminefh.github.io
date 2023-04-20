@@ -3,7 +3,12 @@
 module.exports = {
   content: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 25s linear infinite",
+      },
+    },
   },
+
   plugins: [],
 };
