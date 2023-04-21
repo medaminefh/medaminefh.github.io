@@ -86,6 +86,14 @@ const handleColor = (language: string): string | void => {
 const state = {
   experiences: [
     {
+      company: "Code in place",
+      position: "Section leader Volunteer",
+      from: "04/20/2023",
+      until: undefined,
+      isCurrent: true,
+      tools: ["Python", "Karl", "Graphics", "Console"],
+    },
+    {
       company: "Freelance",
       position: "Fullstack developer",
       from: "03/01/2023",
@@ -250,12 +258,15 @@ const state = {
               </svg>
             </span>
             <h3
-              class="flex items-center mb-1 text-lg font-semibold text-gray-900"
+              class="flex items-center mb-1 text-lg flex-wrap font-semibold text-gray-900 gap-2"
             >
               {{ experience.company }}
+              <span class="text-sm font-normal leading-none text-gray-400"
+                >({{ experience.position }})</span
+              >
               <span
                 v-if="experience.isCurrent"
-                class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"
+                class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded"
                 >Current</span
               ><span
                 :class="[
@@ -268,7 +279,7 @@ const state = {
               >
             </h3>
             <time
-              class="block mb-2 text-sm font-normal leading-none text-gray-400"
+              class="block my-2 text-sm font-normal leading-none text-gray-400"
               >{{ experience.from }} -
               {{ experience.isCurrent ? "Present" : experience.until }}</time
             >

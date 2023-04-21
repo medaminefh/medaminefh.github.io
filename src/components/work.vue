@@ -27,7 +27,7 @@ const projects = reactive([
   },
   {
     title: "Instagram clone",
-    desc: "An instagram clone, using the MEREN stack technologies",
+    desc: "An instagram clone, using the MERN stack technologies",
     tools: ["Mongodb", "Express", "React", "Nodejs"],
     ghRepo: "https://github.com/medaminefh/instag",
     url: "https://medaminefh.github.io/instag",
