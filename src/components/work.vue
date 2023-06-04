@@ -67,6 +67,7 @@ const projectsClone = computed(() =>
     >
       Check my projects
     </h1>
+
     <div
       class="flex flex-col md:flex-row items-center justify-center gap-8 flex-wrap ease-linear duration-300"
     >

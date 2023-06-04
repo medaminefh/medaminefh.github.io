@@ -2,18 +2,19 @@
 import About from "@/components/about.vue";
 import Work from "@/components/work.vue";
 import Contact from "@/components/contact.vue";
+import Events from "@/components/events.vue";
 import { ref } from "vue";
 
-const currentPage = ref<"About" | "Work" | "Contact">("About");
-const components = { About, Work, Contact };
-const changePage = (page: "About" | "Work" | "Contact") => {
+const currentPage = ref<"About" | "Work" | "Contact" | "Events">("About");
+const components = { About, Work, Contact, Events };
+const changePage = (page: "About" | "Work" | "Contact" | "Events") => {
   currentPage.value = page;
 };
 </script>
 
 <template>
   <div class="flex items-center justify-center py-8">
-    <ul class="flex gap-x-20 shadow-md rounded p-2">
+    <ul class="flex md:gap-x-20 gap-x-4 justify-between shadow-md rounded p-2">
       <li
         @click="changePage('About')"
         :class="[
@@ -31,6 +32,15 @@ const changePage = (page: "About" | "Work" | "Contact") => {
         ]"
       >
         Work
+      </li>
+      <li
+        @click="changePage('Events')"
+        :class="[
+          'px-2 hover:text-purple-300 cursor-pointer',
+          currentPage === 'Events' && 'text-purple-500',
+        ]"
+      >
+        Events
       </li>
       <li
         @click="changePage('Contact')"
