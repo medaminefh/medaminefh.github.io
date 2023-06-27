@@ -86,14 +86,6 @@ const handleColor = (language: string): string | void => {
 const state = {
   experiences: [
     {
-      company: "Code in place",
-      position: "Section leader Volunteer",
-      from: "04/20/2023",
-      until: "06/01/2023",
-      isCurrent: false,
-      tools: ["Python", "Karl", "Graphics", "Console"],
-    },
-    {
       company: "Freelance",
       position: "programming mentor",
       from: "03/01/2023",
@@ -114,6 +106,14 @@ const state = {
         "MongoDB",
         "...",
       ],
+    },
+    {
+      company: "Code in place",
+      position: "Section leader Volunteer",
+      from: "04/20/2023",
+      until: "06/01/2023",
+      isCurrent: false,
+      tools: ["Python", "Karl", "Graphics", "Console"],
     },
     {
       company: "Lobsterware",
@@ -297,20 +297,6 @@ const state = {
             </p>
           </li>
         </ol>
-        <div class="absolute left-0 -bottom-50 md:left-20 -z-10">
-          <img
-            src="../assets/flexibility.svg"
-            alt="flexibility"
-            loading="lazy"
-          />
-        </div>
-        <div class="absolute -top-20 -right-10 -z-10 w-96 md:w-full h-96">
-          <img
-            src="https://www.algolia.com/doc/assets/images/home/pattern-f302b47d.svg"
-            alt="pattern"
-            loading="lazy"
-          />
-        </div>
       </div>
     </div>
 

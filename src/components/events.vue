@@ -29,19 +29,21 @@
               src="../assets/section3.png"
             />
           </div>
-          <div class="lg:w-1/2 w-full">
-            <img
-              alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center"
-              src="../assets/section1.png"
-            />
-          </div>
-          <div class="lg:w-1/2 w-full">
-            <img
-              alt="gallery"
-              class="block h-full w-full rounded-lg object-cover object-center"
-              src="../assets/section2.png"
-            />
+          <div class="lg:flex lg:gap-3 lg:space-y-0 space-y-3">
+            <div class="w-full">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="../assets/section1.png"
+              />
+            </div>
+            <div class="w-full">
+              <img
+                alt="gallery"
+                class="block h-full w-full rounded-lg object-cover object-center"
+                src="../assets/section2.png"
+              />
+            </div>
           </div>
         </div>
       </div>
