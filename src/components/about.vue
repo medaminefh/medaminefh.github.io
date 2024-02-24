@@ -185,7 +185,7 @@ const state = {
                 <a
                   title="Resume"
                   class="group"
-                  href="https://drive.google.com/file/d/1WBxXL4sCgcoDUmPKNRRkxt4rBxbzUy7x/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1b9Pm80kWjHSLPfY8SVyBnmB6DN7FClTu/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   ><img
