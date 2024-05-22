@@ -180,7 +180,7 @@ const state = {
             <h3
               class="flex flex-col md:flex-row text-xl font-semibold items-center gap-x-2"
             >
-              <span>Software developer.</span>
+              <span>Software developer...</span>
               <p class="flex gap-x-2 justify-center">
                 <a
                   title="Resume"
@@ -251,7 +251,8 @@ const state = {
             <p class="text-gray-500">
               Mohamed Amine Fhal, a self-taught developer, My passion for
               technology has led me to learn various programming languages and
-              frameworks, always seeking to learn.
+              frameworks, Feel free to reach out if you want to have little
+              chat.
               <button
                 class="text-purple-500 hover:underline"
                 @click="emit('changePage', 'Contact')"
@@ -310,7 +311,9 @@ const state = {
               >{{ experience.from }} -
               {{ experience.isCurrent ? "Present" : experience.until }}</time
             >
-            <p class="text-gray-400 flex flex-wrap items-center gap-2">
+            <p
+              class="text-gray-400 flex flex-wrap items-center gap-2 max-w-4xl"
+            >
               Worked with
               <span
                 v-for="(tool, index) in experience.tools"
@@ -366,9 +369,7 @@ const state = {
                 >
                   {{ blogs[0]?.description }}
                 </p>
-                <div
-                  class="w-full mt-4 justify-end flex items-center cursor-pointer"
-                >
+                <div class="mt-4 justify-end flex items-center">
                   <a
                     :href="blogs[0]?.url"
                     target="_blank"
@@ -377,7 +378,7 @@ const state = {
                     <span>Read more</span>
                   </a>
                   <svg
-                    class="ml-3 lg:ml-6"
+                    class="ml-2"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="18"
@@ -444,10 +445,3 @@ const state = {
     </div>
   </div>
 </template>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-.f-f-p {
-  font-family: "Poppins", sans-serif;
-}
-</style>

@@ -42,7 +42,11 @@ const submit = async () => {
       {{ mailSent ? "Mail sent" : "Contact me" }}
     </h1>
 
-    <form v-if="!mailSent" @submit.prevent="submit">
+    <form
+      v-if="!mailSent"
+      @submit.prevent="submit"
+      class="w-full max-w-lg mx-auto"
+    >
       <div class="mb-6">
         <label
           for="subject"

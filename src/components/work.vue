@@ -76,7 +76,7 @@ const projects = reactive([
         <div
           v-for="(project, index) in projects"
           :key="index"
-          class="select-none group relative w-56 h-40 lg:w-1/3 px-4 py-2 shadow-lg border border-slate-500 rounded-md bg-white"
+          class="select-none group relative w-full h-40 lg:w-1/3 px-4 py-2 shadow-lg border border-slate-500 rounded-md bg-white"
         >
           <div class="flex flex-col justify-between w-full h-full relative">
             <div

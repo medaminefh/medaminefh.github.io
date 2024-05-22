@@ -13,9 +13,9 @@ const changePage = (page: "About" | "Work" | "Contact" | "Events") => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center pb-4 lg:py-8">
+  <div class="flex items-center justify-center mb-4 lg:my-8">
     <ul
-      class="bg-neutral-50 lg:rounded-[28px] shadow flex gap-6 px-6 py-4 text-lg text-slate-800"
+      class="bg-neutral-50/50 lg:rounded-[28px] shadow flex gap-6 px-6 py-4 text-lg text-slate-800 w-full lg:w-auto"
     >
       <li
         @click="changePage('About')"
