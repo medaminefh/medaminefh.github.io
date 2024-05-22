@@ -156,7 +156,7 @@ const state = {
     <div
       class="flex flex-col gap-y-8 md:flex-row md:gap-x-8 divide-y-2 md:divide-x-2 md:divide-y-0 h-full"
     >
-      <div class="space-y-6 w-full relative">
+      <div class="space-y-10 w-full relative">
         <div class="flex flex-col md:flex-row gap-6 items-center">
           <div
             class="relative rounded-full border border-cyan-500 w-44 h-44 md:hover:shadow-cyan-200 md:shadow-xl ease-in duration-100 shadow-cyan-200 shadow-lg"
@@ -221,6 +221,33 @@ const state = {
               </p>
             </h3>
             <hr />
+            <div
+              class="select-none flex gap-x-2 backdrop-filter backdrop-blur-sm bg-opacity-70 py-2 px-3 text-sm bg-teal-100/50 max-w-fit rounded-xl items-center ring-1 ring-slate-100"
+            >
+              <span class="text-teal-500/50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  style="width: 20px"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 256 256"
+                >
+                  <g fill="currentColor">
+                    <path
+                      d="m96 240l16-80l-64-24L160 16l-16 80l64 24Z"
+                      opacity=".2"
+                    ></path>
+                    <path
+                      d="M215.79 118.17a8 8 0 0 0-5-5.66L153.18 90.9l14.66-73.33a8 8 0 0 0-13.69-7l-112 120a8 8 0 0 0 3 13l57.63 21.61l-14.62 73.25a8 8 0 0 0 13.69 7l112-120a8 8 0 0 0 1.94-7.26M109.37 214l10.47-52.38a8 8 0 0 0-5-9.06L62 132.71l84.62-90.66l-10.46 52.38a8 8 0 0 0 5 9.06l52.8 19.8Z"
+                    ></path>
+                  </g>
+                </svg>
+              </span>
+              <span class="text-slate-600">Available for Collaboration</span>
+            </div>
             <p class="text-gray-500">
               Mohamed Amine Fhal, a self-taught developer, My passion for
               technology has led me to learn various programming languages and

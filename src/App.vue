@@ -13,8 +13,10 @@ const changePage = (page: "About" | "Work" | "Contact" | "Events") => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center py-8">
-    <ul class="flex md:gap-x-20 gap-x-4 justify-between shadow-md rounded p-2">
+  <div class="flex items-center justify-center pb-4 lg:py-8">
+    <ul
+      class="bg-neutral-50 lg:rounded-[28px] shadow flex gap-6 px-6 py-4 text-lg text-slate-800"
+    >
       <li
         @click="changePage('About')"
         :class="[

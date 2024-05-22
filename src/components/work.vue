@@ -76,12 +76,9 @@ const projects = reactive([
         <div
           v-for="(project, index) in projects"
           :key="index"
-          class="group relative w-56 h-40 px-4 py-2 shadow-lg border border-slate-500 rounded-md bg-white"
+          class="select-none group relative w-56 h-40 lg:w-1/3 px-4 py-2 shadow-lg border border-slate-500 rounded-md bg-white"
         >
           <div class="flex flex-col justify-between w-full h-full relative">
-            <div
-              class="absolute w-60 h-44 -top-4 -left-6 rounded-md project overflow-hidden"
-            ></div>
             <div
               class="hidden md:flex md:opacity-0 md:absolute top-0 right-0 md:group-hover:opacity-100 md:group-hover:-top-8 gap-x-3 ease-in duration-100 justify-end items-start"
             >
@@ -144,24 +141,5 @@ const projects = reactive([
 .v-enter-active,
 .v-leave-active {
   transition: all 0.5s ease;
-}
-
-.project:before {
-  animation: spin 60s linear infinite;
-  background: repeating-conic-gradient(
-    #fff 0deg,
-    #fff 20deg,
-    #5272f2 20deg,
-    #5272f2 40deg,
-    #fff 40deg
-  );
-  content: "";
-  display: block;
-  height: 200%;
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  z-index: -1;
 }
 </style>
