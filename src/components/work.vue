@@ -3,6 +3,13 @@ import { reactive } from "vue";
 
 const projects = reactive([
   {
+    title: "E-commerce app",
+    desc: "An E-commerce platform built with Nuxt3 & TailwindCss, it has the Admin dashboard to manage products, users and orders",
+    tools: ["Nuxt3", "TailwindCss"],
+    ghRepo: "https://github.com/medaminefh/E-commerce_nuxt_ts",
+    url: "https://e-commerce-nuxt-ts.vercel.app/",
+  },
+  {
     title: "Trello clone",
     desc: "Trello clone, I used Nuxt3 & TailwindCss in this project",
     tools: ["Nuxt3", "TailwindCss", "Drag Api"],
