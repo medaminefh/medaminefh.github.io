@@ -427,9 +427,7 @@ const state = {
                       {{ blog?.created_at }}
                     </p>
                   </div>
-                  <div
-                    class="bg-white px-3 lg:px-6 py-4 rounded-bl-3xl rounded-br-3xl"
-                  >
+                  <div class="bg-white px-3 lg:px-6 py-4 rounded-b-lg">
                     <h1
                       class="text-lg hover:text-purple-300 cursor-pointer text-gray-900 font-semibold tracking-wider"
                     >

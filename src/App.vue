@@ -64,6 +64,12 @@ const changePage = (page: "About" | "Work" | "Contact" | "Events") => {
         :key="currentPage"
       />
     </TransitionGroup>
+    <img
+      src="./assets/shadow.png"
+      class="object-cover -z-10 object-center fixed w-full h-full left-0 top-0 dark:mix-blend-soft-light"
+      alt="shadow-background"
+      loading="lazy"
+    />
   </div>
   <div class="flex p-4 justify-center items-center">
     <p>&copy;medaminefh {{ new Date().getUTCFullYear() }}</p>
