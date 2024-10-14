@@ -37,7 +37,7 @@ const submit = async () => {
 <template>
   <div>
     <h1
-      class="text-center text-3xl lg:text-5xl tracking-wider text-gray-900 mb-12 lg:mb-24"
+      class="text-center text-3xl lg:text-5xl tracking-wider text-gray-100 mb-12 lg:mb-24"
     >
       {{ mailSent ? "Mail sent" : "Contact me" }}
     </h1>
@@ -50,7 +50,7 @@ const submit = async () => {
       <div class="mb-6">
         <label
           for="subject"
-          class="block mb-2 text-sm font-medium text-gray-900"
+          class="block mb-2 text-sm font-medium text-gray-100"
           >Subject</label
         >
         <input
@@ -65,7 +65,7 @@ const submit = async () => {
       <div class="mb-6">
         <label
           for="message"
-          class="block mb-2 text-sm font-medium text-gray-900"
+          class="block mb-2 text-sm font-medium text-gray-100"
           >Your message</label
         >
         <textarea

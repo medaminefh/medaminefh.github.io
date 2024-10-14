@@ -71,7 +71,7 @@ const projects = reactive([
 <template>
   <div>
     <h1
-      class="text-center text-3xl lg:text-5xl tracking-wider text-gray-900 mb-12 lg:mb-24"
+      class="text-center text-3xl lg:text-5xl tracking-wider text-gray-100 mb-12 lg:mb-24"
     >
       Check my projects
     </h1>
@@ -87,7 +87,7 @@ const projects = reactive([
         >
           <div class="flex flex-col justify-between w-full h-full relative">
             <div
-              class="hidden md:flex md:opacity-0 md:absolute top-0 right-0 md:group-hover:opacity-100 md:group-hover:-top-8 gap-x-3 ease-in duration-100 justify-end items-start"
+              class="hidden bg-white md:flex md:opacity-0 md:absolute top-0 right-0 md:group-hover:opacity-100 md:group-hover:-top-8 gap-x-3 ease-in duration-100 justify-end items-start"
             >
               <a
                 :href="project.ghRepo"

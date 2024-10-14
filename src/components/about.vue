@@ -167,33 +167,13 @@ const state = {
               alt="Mohamed amine fh photo"
               class="w-44 rounded-full"
             />
-            <div class="absolute -top-10 -left-10 -z-10 w-64">
-              <img
-                src="../assets/illu-scalability.svg"
-                alt="illu-scalability"
-                loading="lazy"
-                class="w-64 animate-spin-slow"
-              />
-            </div>
           </div>
           <div class="flex flex-col gap-y-2 max-w-lg">
             <h3
-              class="flex flex-col md:flex-row text-xl font-semibold items-center gap-x-2"
+              class="flex flex-col md:flex-row text-xl text-gray-100 font-semibold items-center gap-x-2"
             >
               <span>Software developer...</span>
               <p class="flex gap-x-2 justify-center">
-                <a
-                  title="Resume"
-                  class="group"
-                  href="https://drive.google.com/file/d/1b9Pm80kWjHSLPfY8SVyBnmB6DN7FClTu/view"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img
-                    loading="lazy"
-                    src="../assets/resume.svg"
-                    alt="resume"
-                    class="w-7 md:group-hover:scale-110"
-                /></a>
                 <a
                   href="https://www.linkedin.com/in/mohamed-amine-fhal"
                   target="_blank"
@@ -222,9 +202,9 @@ const state = {
             </h3>
             <hr />
             <div
-              class="select-none flex gap-x-2 backdrop-filter backdrop-blur-sm bg-opacity-70 py-2 px-3 text-sm bg-teal-100/50 max-w-fit rounded-xl items-center ring-1 ring-slate-100"
+              class="select-none flex gap-x-2 backdrop-filter backdrop-blur-sm bg-opacity-70 py-2 px-3 text-sm bg-teal-100 max-w-fit rounded-xl items-center ring-1 ring-slate-100"
             >
-              <span class="text-teal-500/50">
+              <span class="text-teal-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -246,9 +226,9 @@ const state = {
                   </g>
                 </svg>
               </span>
-              <span class="text-slate-600">Available for Collaboration</span>
+              <span class="text-slate-700">Available for Collaboration</span>
             </div>
-            <p class="text-gray-500">
+            <p class="text-gray-300">
               Mohamed Amine Fhal, a self-taught developer, My passion for
               technology has led me to learn various programming languages and
               frameworks, Feel free to reach out if you want to have little
@@ -286,10 +266,10 @@ const state = {
               </svg>
             </span>
             <h3
-              class="flex items-center mb-1 text-lg flex-wrap font-semibold text-gray-900 gap-2"
+              class="flex items-center mb-1 text-lg flex-wrap font-semibold text-gray-100 gap-2"
             >
               {{ experience.company }}
-              <span class="text-sm font-normal leading-none text-gray-400"
+              <span class="text-sm font-normal leading-none text-gray-300"
                 >({{ experience.position }})</span
               >
               <span
@@ -329,11 +309,10 @@ const state = {
         </ol>
       </div>
     </div>
-
     <div id="blog" class="px-4 xl:px-0 py-12">
       <div class="mx-auto container">
         <h1
-          class="text-center text-3xl lg:text-5xl tracking-wider text-gray-900"
+          class="text-center text-3xl lg:text-5xl tracking-wider text-gray-100"
         >
           Check my latest blogs
         </h1>

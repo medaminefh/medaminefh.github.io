@@ -3,6 +3,7 @@ import About from "@/components/about.vue";
 import Work from "@/components/work.vue";
 import Contact from "@/components/contact.vue";
 import Events from "@/components/events.vue";
+import MatrixComp from "./components/MatrixComp.vue";
 import { ref } from "vue";
 
 const currentPage = ref<"About" | "Work" | "Contact" | "Events">("About");
@@ -15,7 +16,7 @@ const changePage = (page: "About" | "Work" | "Contact" | "Events") => {
 <template>
   <div class="flex items-center justify-center mb-4 lg:my-8">
     <ul
-      class="bg-neutral-50/50 lg:rounded-[28px] shadow flex lg:gap-6 gap-3 px-6 py-4 text-lg text-slate-800 w-full lg:w-auto"
+      class="bg-neutral-50 lg:rounded-[28px] shadow flex lg:gap-6 gap-3 px-6 py-4 text-lg text-slate-800 w-full lg:w-auto"
     >
       <li
         @click="changePage('About')"
@@ -64,14 +65,10 @@ const changePage = (page: "About" | "Work" | "Contact" | "Events") => {
         :key="currentPage"
       />
     </TransitionGroup>
-    <img
-      src="./assets/shadow.png"
-      class="object-cover -z-10 object-center fixed w-full h-full left-0 top-0 dark:mix-blend-soft-light"
-      alt="shadow-background"
-      loading="lazy"
-    />
   </div>
-  <div class="flex p-4 justify-center items-center">
+  <MatrixComp />
+
+  <div class="flex p-4 justify-center items-center text-gray-100">
     <p>&copy;medaminefh {{ new Date().getUTCFullYear() }}</p>
   </div>
 </template>

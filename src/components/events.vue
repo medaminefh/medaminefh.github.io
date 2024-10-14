@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1
-      class="text-center text-3xl lg:text-5xl tracking-wider text-gray-900 mb-12 lg:mb-24"
+      class="text-center text-3xl lg:text-5xl tracking-wider text-gray-100 mb-12 lg:mb-24"
     >
       Events
     </h1>
 
-    <div class="max-w-3xl mx-auto px-5 py-2">
+    <div class="max-w-3xl mx-auto px-5 py-2 text-gray-200">
       <p class="text-lg mb-5">
         So honored to participate as a section leader in the
         <a
