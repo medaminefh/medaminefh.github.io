@@ -14,20 +14,23 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4 # Fixed the setup-node action here
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - name: Install Dependencies
-        run: npm install # Changed from npm ci to handle missing lockfiles
+        run: npm install
 
-      - name: Build Project
-        run: npm run build
+      - name: Generate Static Site
+        run: npx nuxt generate # This forces Nuxt to build static HTML files instead of a Node server
 
-      - name: Deploy Build Folder to Main Branch
+      - name: Add .nojekyll to prevent 404s on _nuxt assets
+        run: touch .output/public/.nojekyll
+
+      - name: Deploy Public Folder to Main Branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .output
+          folder: .output/public # Nuxt puts the static index.html here!
           branch: main
           clean: true
           single-commit: false
