@@ -29,6 +29,9 @@
       "@@/*": [
         "../*"
       ],
+      "nuxt": [
+        "../node_modules/nuxt"
+      ],
       "@unhead/vue": [
         "../node_modules/@unhead/vue"
       ],
@@ -47,21 +50,6 @@
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
       ],
-      "nuxt": [
-        "../node_modules/nuxt"
-      ],
-      "vite/client": [
-        "../node_modules/vite/client"
-      ],
-      "nitropack/types": [
-        "../node_modules/nitropack/types"
-      ],
-      "nitropack/runtime": [
-        "../node_modules/nitropack/runtime"
-      ],
-      "nitropack": [
-        "../node_modules/nitropack"
-      ],
       "defu": [
         "../node_modules/defu"
       ],
@@ -76,6 +64,18 @@
       ],
       "crossws": [
         "../node_modules/crossws"
+      ],
+      "vite/client": [
+        "../node_modules/vite/client"
+      ],
+      "nitropack/types": [
+        "../node_modules/nitropack/types"
+      ],
+      "nitropack/runtime": [
+        "../node_modules/nitropack/runtime"
+      ],
+      "nitropack": [
+        "../node_modules/nitropack"
       ],
       "#shared": [
         "../shared"

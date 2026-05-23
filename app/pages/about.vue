@@ -49,7 +49,7 @@
 		</div>
 
 		<!-- Experience Timeline -->
-		<div class="glass p-10 md:p-16 rounded-[40px] bg-black/30">
+		<div class="glass p-1 md:p-16 rounded-[40px] bg-black/30">
 			<h2 class="text-4xl font-extrabold mb-12 text-center text-white">
 				My Journey
 			</h2>

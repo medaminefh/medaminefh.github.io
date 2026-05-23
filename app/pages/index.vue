@@ -4,12 +4,10 @@
 	>
 		<!-- Floating background glow -->
 		<div
-			class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/20 blur-[120px] rounded-full pointer-events-none"
+			class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-indigo-500/20 blur-[120px] rounded-full pointer-events-none"
 		></div>
 
-		<div
-			class="p-8 md:p-16 max-w-4xl w-full flex flex-col items-center animate-fade-in-up"
-		>
+		<div class="py-8 md:p-6 w-full flex flex-col items-center justify-center animate-fade-in-up text-center px-4">
 			<!-- Animated Profile Photo -->
 			<div class="relative group cursor-pointer mb-10">
 				<div
@@ -37,15 +35,11 @@
 			</div>
 
 			<!-- Main Headline with Gradient Text -->
-			<h1
-				class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-white to-purple-300 drop-shadow-sm"
-			>
+			<h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-white to-purple-300 drop-shadow-sm leading-tight w-full">
 				Mohamed Amine Fhal
 			</h1>
 
-			<p
-				class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl leading-relaxed font-light"
-			>
+			<p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl leading-relaxed font-light px-2 w-full">
 				I engineer
 				<span class="text-white font-semibold">premium web experiences</span>
 				bridging the gap between immersive 3D interfaces and scalable frontend
@@ -53,12 +47,10 @@
 			</p>
 
 			<!-- Interactive Buttons -->
-			<div
-				class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto justify-center"
-			>
+			<div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto justify-center items-center px-4 sm:px-0">
 				<NuxtLink
 					to="/work"
-					class="group relative px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-2xl text-white font-semibold transition-all shadow-[0_0_40px_rgba(79,70,229,0.4)] hover:shadow-[0_0_60px_rgba(79,70,229,0.6)] overflow-hidden"
+					class="group relative px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-2xl text-white font-semibold transition-all shadow-[0_0_40px_rgba(79,70,229,0.4)] hover:shadow-[0_0_60px_rgba(79,70,229,0.6)] overflow-hidden w-full sm:w-auto flex justify-center"
 				>
 					<div
 						class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"
@@ -83,7 +75,7 @@
 
 				<NuxtLink
 					to="/contact"
-					class="px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 transition-all backdrop-blur-md hover:border-white/30 flex items-center justify-center gap-2"
+					class="px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 transition-all backdrop-blur-md hover:border-white/30 flex items-center justify-center gap-2 w-full sm:w-auto"
 				>
 					Let's Talk
 				</NuxtLink>
