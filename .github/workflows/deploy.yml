@@ -1,0 +1,33 @@
+name: Build nuxt4-migration and Deploy to Main
+
+on:
+  push:
+    branches:
+      - nuxt4-migration # Triggers every time you push to the dev branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/checkout@v4
+        with:
+          node-version: "20" # Matches modern LTS versions
+
+      - name: Install Dependencies
+        run: npm ci # Faster, cleaner install for production/CI environments
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy Build Folder to Main Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .output # The directory your build script outputs
+          branch: main # The target branch for your build files
+          clean: true # Automatically removes old files from main
+          single-commit: false # Keeps a history of your deployments instead of wiping it
