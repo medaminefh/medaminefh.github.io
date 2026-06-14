@@ -1,34 +1,6 @@
 {
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noEmit": true,
-    "skipLibCheck": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "allowSyntheticDefaultImports": true,
-    "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment",
     "paths": {
-      "#imports": [
-        "./types/nitro-imports"
-      ],
-      "~/*": [
-        "../app/*"
-      ],
-      "@/*": [
-        "../app/*"
-      ],
-      "~~/*": [
-        "../*"
-      ],
-      "@@/*": [
-        "../*"
-      ],
       "nuxt": [
         "../node_modules/nuxt"
       ],
@@ -73,47 +45,39 @@
       ],
       "nitropack/runtime": [
         "../node_modules/nitropack/runtime"
-      ],
-      "#shared": [
-        "../shared"
-      ],
-      "#shared/*": [
-        "../shared/*"
-      ],
-      "#server": [
-        "../server"
-      ],
-      "#server/*": [
-        "../server/*"
-      ],
-      "#build": [
-        "./"
-      ],
-      "#build/*": [
-        "./*"
-      ],
-      "#internal/nuxt/paths": [
-        "../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
-      ],
-      "#unhead/composables": [
-        "../node_modules/nuxt/dist/head/runtime/composables"
       ]
     },
-    "lib": [
-      "esnext",
-      "webworker",
-      "dom.iterable"
-    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "allowArbitraryExtensions": true,
+    "strict": true,
     "noUncheckedIndexedAccess": true,
-    "allowArbitraryExtensions": true
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "module": "preserve",
+    "noEmit": true,
+    "types": [],
+    "moduleResolution": "Bundler",
+    "useDefineForClassFields": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "./types/nitro-nuxt.d.ts",
-    "../node_modules/runtime/server",
-    "../node_modules/dist/runtime/server",
-    "../server/**/*",
-    "../shared/**/*.d.ts",
-    "./types/nitro.d.ts"
+    "./nuxt.node.d.ts",
+    "../modules/*.*",
+    "../nuxt.config.*",
+    "../.config/nuxt.*",
+    "../layers/*/nuxt.config.*",
+    "../layers/*/.config/nuxt.*",
+    "../layers/*/modules/**/*",
+    "../nuxt.schema.*",
+    "../layers/*/nuxt.schema.*"
   ],
   "exclude": [
     "../node_modules",
@@ -122,6 +86,18 @@
     "../node_modules/@tresjs/nuxt/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
-    "../dist"
+    "../dist",
+    "../.data",
+    "../app/**/*",
+    "../modules/*/runtime/**/*",
+    "../test/nuxt/**/*",
+    "../tests/nuxt/**/*",
+    "../layers/*/app/**/*",
+    "../layers/*/modules/*/runtime/**/*",
+    "../modules/*/runtime/server/**/*",
+    "../layers/*/server/**/*",
+    "../layers/*/modules/*/runtime/server/**/*",
+    "../node_modules/runtime",
+    "../node_modules/dist/runtime"
   ]
 }

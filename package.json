@@ -14,7 +14,7 @@
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@tresjs/core": "^4.3.0",
     "@tresjs/nuxt": "^5.6.1",
-    "nuxt": "^3.15.0",
+    "nuxt": "^4.4.8",
     "three": "^0.170.0",
     "vue": "latest",
     "vue-router": "latest"

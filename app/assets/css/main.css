@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-900 text-white min-h-screen overflow-x-hidden;
-  font-family: 'Inter', sans-serif;
+	@apply bg-neutral-900 text-white min-h-screen overflow-x-hidden;
+	font-family: "Inter", sans-serif;
 }
 
 /* Glassmorphism utility */
 .glass {
-  @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-20 shadow-lg rounded-2xl;
+	@apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-20 shadow-lg rounded-2xl;
 }
