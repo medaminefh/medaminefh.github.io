@@ -1,294 +1,165 @@
 <template>
-	<div
-		class="flex-1 w-full max-w-6xl mx-auto flex flex-col gap-20 animate-fade-in-up relative z-10 pt-10"
-	>
-		<!-- Bio Section -->
-		<div class="flex flex-col lg:flex-row gap-12 items-center lg:items-center">
-			<div class="relative group">
-				<div
-					class="absolute -inset-1 bg-gradient-to-tr from-emerald-500 to-indigo-500 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000"
-				></div>
-				<div
-					class="w-56 h-56 relative rounded-full overflow-hidden border-4 border-[#111] shadow-2xl"
-				>
-					<img
-						src="/photo.png"
-						alt="Mohamed Amine Fh"
-						class="w-full h-full object-cover"
-					/>
-				</div>
-			</div>
-
-			<div class="flex flex-col gap-6 text-center lg:text-left flex-1">
-				<h1
-					class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400"
-				>
-					About Me
-				</h1>
-				<div
-					class="inline-flex items-center justify-center lg:justify-start gap-2 text-sm font-bold text-emerald-400 bg-emerald-400/10 px-4 py-2 rounded-full w-fit mx-auto lg:mx-0 border border-emerald-400/20"
-				>
-					<span class="relative flex h-3 w-3">
-						<span
-							class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
-						></span>
-						<span
-							class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"
-						></span>
-					</span>
-					Ready for new projects
-				</div>
-				<p class="text-gray-300 leading-relaxed text-xl font-light">
-					I'm a self-taught developer deeply passionate about building scalable,
-					high-quality web applications. My journey into technology has driven
-					me to master modern JavaScript frameworks, backend systems, and
-					immersive 3D web experiences. I thrive on translating complex problems
-					into elegant, intuitive user interfaces.
+	<div class="section-shell section-stack">
+		<section class="split-grid" aria-labelledby="about-title">
+			<div class="section-heading reveal">
+				<p class="eyebrow">About</p>
+				<h1 id="about-title">A developer who cares about the product behind the interface.</h1>
+				<p class="lead">
+					I am Mohamed Amine Fhal, a software developer focused on Vue, Nuxt,
+					JavaScript ecosystems, backend foundations, and interactive web experiences.
+					I like turning unclear workflows into calm, useful, polished products.
 				</p>
 			</div>
-		</div>
 
-		<!-- Experience Timeline -->
-		<div class="glass p-1 md:p-16 rounded-[40px] bg-black/30">
-			<h2 class="text-4xl font-extrabold mb-12 text-center text-white">
-				My Journey
-			</h2>
-			<div
-				class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-indigo-500/50 before:to-transparent"
-			>
-				<div
-					v-for="(exp, i) in experiences"
-					:key="i"
-					class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-				>
-					<div
-						class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-[#111] bg-gradient-to-br from-indigo-400 to-purple-600 shadow-[0_0_20px_rgba(79,70,229,0.5)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 relative"
-					></div>
+			<aside class="profile-panel reveal" style="--delay: 90ms">
+				<img src="/photo.png" alt="Mohamed Amine Fhal" width="480" height="480" class="profile-photo" />
+				<div>
+					<p class="eyebrow">Current focus</p>
+					<h2>Frontend architecture, business workflows, and WebGL polish.</h2>
+					<p>
+						The portfolio now highlights recent live work across healthcare, events,
+						browser extensions, publishing, and game interaction.
+					</p>
+				</div>
+			</aside>
+		</section>
 
-					<div
-						class="w-[calc(100%-5rem)] md:w-[calc(50%-3rem)] glass p-8 bg-white/5 hover:bg-white/10 transition-colors border border-white/10 hover:border-indigo-500/50 rounded-3xl relative overflow-hidden"
-					>
-						<!-- Glow effect -->
-						<div
-							class="absolute -inset-10 bg-indigo-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"
-						></div>
+		<section class="split-grid" aria-labelledby="journey-title">
+			<div class="section-heading">
+				<p class="eyebrow">Experience</p>
+				<h2 id="journey-title">Teaching, shipping, and learning in public.</h2>
+				<p class="lead">
+					My path mixes product work, mentoring, and hands-on development. That combination
+					makes me comfortable explaining decisions as well as implementing them.
+				</p>
+			</div>
 
-						<div class="relative z-10">
-							<div
-								class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2"
-							>
-								<h3 class="font-bold text-2xl text-white">
-									{{ exp.position }}
-								</h3>
-								<span
-									class="text-indigo-400 text-sm font-bold bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20"
-								>
-									{{ exp.from }} - {{ exp.isCurrent ? "Present" : exp.until }}
-								</span>
-							</div>
-							<div class="text-gray-300 mb-6 font-semibold text-lg">
-								{{ exp.company }}
-							</div>
-
-							<div class="flex flex-wrap gap-2">
-								<span
-									v-for="tool in exp.tools"
-									:key="tool"
-									class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#111] border border-white/5 text-gray-300 shadow-inner"
-								>
-									{{ tool }}
-								</span>
-							</div>
-						</div>
+			<div class="timeline">
+				<article v-for="(item, index) in experience" :key="item.title" class="timeline-item reveal" :style="{ '--delay': `${index * 80}ms` }">
+					<span>{{ item.period }}</span>
+					<strong>{{ item.title }}</strong>
+					<p>{{ item.copy }}</p>
+					<div class="tag-row">
+						<span v-for="tool in item.tools" :key="tool" class="tech-tag">{{ tool }}</span>
 					</div>
+				</article>
+			</div>
+		</section>
+
+		<section aria-labelledby="principles-title">
+			<div class="section-heading center">
+				<p class="eyebrow">Working style</p>
+				<h2 id="principles-title">What I optimize for.</h2>
+			</div>
+
+			<div class="principles-grid">
+				<div v-for="(principle, index) in principles" :key="principle.title" class="service-card reveal" :style="{ '--delay': `${index * 70}ms` }">
+					<span>{{ principle.kicker }}</span>
+					<h3>{{ principle.title }}</h3>
+					<p>{{ principle.copy }}</p>
 				</div>
 			</div>
-		</div>
-
-		<!-- Latest Blogs -->
-		<div class="mb-20">
-			<h2 class="text-4xl font-extrabold mb-10 text-center text-white">
-				Technical Writing
-			</h2>
-
-			<div
-				v-if="pending"
-				class="text-center text-indigo-400 py-20 flex justify-center items-center gap-3"
-			>
-				<svg
-					class="animate-spin h-8 w-8 text-indigo-500"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-				>
-					<circle
-						class="opacity-25"
-						cx="12"
-						cy="12"
-						r="10"
-						stroke="currentColor"
-						stroke-width="4"
-					></circle>
-					<path
-						class="opacity-75"
-						fill="currentColor"
-						d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-					></path>
-				</svg>
-				<span class="text-xl font-medium">Fetching articles...</span>
-			</div>
-
-			<div
-				v-else-if="blogs && blogs.length > 0"
-				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-			>
-				<a
-					v-for="blog in blogs.slice(0, 3)"
-					:key="blog.id"
-					:href="blog.url"
-					target="_blank"
-					class="glass overflow-hidden group hover:-translate-y-2 transition-all duration-300 bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:shadow-[0_10px_40px_rgba(79,70,229,0.3)] rounded-3xl flex flex-col"
-				>
-					<div class="h-52 overflow-hidden bg-[#111] relative">
-						<img
-							v-if="blog.cover_image"
-							:src="blog.cover_image"
-							:alt="blog.title"
-							class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-						/>
-						<div
-							class="absolute inset-0 bg-gradient-to-t from-[#111] to-transparent opacity-80"
-						></div>
-					</div>
-					<div
-						class="p-8 flex-1 flex flex-col relative z-10 -mt-10 bg-gradient-to-b from-transparent to-[#1a1a1a] rounded-b-3xl"
-					>
-						<div
-							class="text-xs text-indigo-400 mb-3 font-bold uppercase tracking-wider"
-						>
-							{{ formatDate(blog.published_at) }}
-						</div>
-						<h3
-							class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors line-clamp-2 mb-4"
-						>
-							{{ blog.title }}
-						</h3>
-						<p
-							class="text-sm text-gray-400 line-clamp-3 font-light leading-relaxed mb-4"
-						>
-							{{ blog.description }}
-						</p>
-						<div
-							class="mt-auto text-indigo-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
-						>
-							Read Article
-							<svg
-								class="w-4 h-4"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M17 8l4 4m0 0l-4 4m4-4H3"
-								></path>
-							</svg>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
+		</section>
 	</div>
 </template>
 
 <script setup lang="ts">
-useHead({
-	title: "Mohamed Amine Fhal | About",
-	meta: [
-		{
-			name: "description",
-			content:
-				"Learn more about my background, experience, and latest technical articles.",
-		},
-	],
-});
+const baseUrl = "https://medaminefh.github.io";
 
-// SSR Data fetching for blogs
-const { data: blogs, pending } = await useFetch<any[]>(
-	"https://dev.to/api/articles?username=medaminefh",
+const experience = [
 	{
-		lazy: true,
-		server: true,
-	}
-);
-
-const formatDate = (dateString: string) => {
-	return new Date(dateString).toLocaleDateString("en-US", {
-		year: "numeric",
-		month: "short",
-		day: "numeric",
-	});
-};
-
-const experiences = [
-	{
-		company: "Freelance",
-		position: "Programming Mentor",
-		from: "03/2023",
-		until: undefined,
-		isCurrent: true,
-		tools: [
-			"Javascript",
-			"Python",
-			"Typescript",
-			"Vue",
-			"React",
-			"Node.js",
-			"Django",
-			"GraphQL",
-		],
+		period: "2023 - Present",
+		title: "Programming Mentor, Freelance",
+		copy: "Mentoring learners and builders across JavaScript, Python, TypeScript, Vue, React, Node.js, Django, and GraphQL.",
+		tools: ["JavaScript", "Python", "TypeScript", "Vue", "React", "Node.js"],
 	},
 	{
-		company: "Code in place",
-		position: "Section Leader Volunteer",
-		from: "04/2023",
-		until: "06/2023",
-		isCurrent: false,
-		tools: ["Python", "Graphics", "Console"],
+		period: "2023",
+		title: "Section Leader Volunteer, Code in Place",
+		copy: "Supported students through Python fundamentals, debugging habits, and problem-solving sessions.",
+		tools: ["Python", "Teaching", "Graphics", "Console"],
 	},
 	{
-		company: "Lobsterware",
-		position: "Javascript Developer",
-		from: "06/2022",
-		until: "03/2023",
-		isCurrent: false,
-		tools: [
-			"Javascript",
-			"Typescript",
-			"TailwindCss",
-			"Vue.js",
-			"Node.js",
-			"GraphQL",
-		],
+		period: "2022 - 2023",
+		title: "JavaScript Developer, Lobsterware",
+		copy: "Built and maintained JavaScript, TypeScript, Vue, Tailwind CSS, Node.js, and GraphQL interfaces.",
+		tools: ["JavaScript", "TypeScript", "Vue", "Tailwind CSS", "GraphQL"],
 	},
 ];
+
+const principles = [
+	{
+		kicker: "Clarity",
+		title: "Make the product easy to understand",
+		copy: "Good interfaces reduce guessing. I prioritize hierarchy, labels, empty states, and flow before decoration.",
+	},
+	{
+		kicker: "Durability",
+		title: "Build systems that can keep growing",
+		copy: "Shared data, reusable components, accessible markup, and predictable styles keep future changes cheaper.",
+	},
+	{
+		kicker: "Taste",
+		title: "Use motion and 3D with purpose",
+		copy: "Animation should make a product feel alive without slowing down the user or hiding the work.",
+	},
+];
+
+useSeoMeta({
+	title: "About",
+	description:
+		"Learn about Mohamed Amine Fhal, a software developer focused on Vue, Nuxt, JavaScript, backend foundations, mentoring, and interactive web products.",
+	ogTitle: "About Mohamed Amine Fhal",
+	ogDescription:
+		"Software developer profile, experience, working style, and technical focus areas.",
+	ogImage: `${baseUrl}/og-image.png`,
+	ogUrl: `${baseUrl}/about`,
+	twitterCard: "summary_large_image",
+});
+
+useHead({
+	link: [{ rel: "canonical", href: `${baseUrl}/about` }],
+});
 </script>
 
 <style scoped>
-.animate-fade-in-up {
-	animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.profile-panel {
+	display: grid;
+	gap: 18px;
 }
 
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(40px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
+.profile-photo {
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	filter: saturate(1.04) contrast(1.02);
+}
+
+.profile-panel h2 {
+	margin-top: 10px;
+	color: var(--text);
+	font-size: 1.55rem;
+	font-weight: 900;
+	line-height: 1.18;
+}
+
+.profile-panel p:not(.eyebrow) {
+	margin-top: 12px;
+	color: var(--muted);
+	line-height: 1.65;
+}
+
+.principles-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+}
+
+@media (max-width: 900px) {
+	.principles-grid {
+		grid-template-columns: 1fr;
 	}
 }
 </style>

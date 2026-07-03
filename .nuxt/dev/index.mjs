@@ -639,6 +639,21 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/": {
+        "prerender": true
+      },
+      "/work": {
+        "prerender": true
+      },
+      "/about": {
+        "prerender": true
+      },
+      "/services": {
+        "prerender": true
+      },
+      "/contact": {
+        "prerender": true
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -648,6 +663,26 @@ const _inlineRuntimeConfig = {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
+      },
+      "/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/work/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/about/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/services/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/contact/_payload.json": {
+        "ssr": true,
+        "prerender": true
       }
     }
   },
@@ -2050,7 +2085,7 @@ const _3otocxMz5mQRwyX7bGTe5Arp_OByyP38pR3r7aOaQwM = (function(nitro) {
 
 const rootDir = "C:/Users/SBS/Desktop/workspace/medaminefh.github.io";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"Mohamed Amine Fhal - A passionate software developer building premium web experiences."},{"property":"og:title","content":"Mohamed Amine Fhal | Portfolio"},{"property":"og:description","content":"Mohamed Amine Fhal - A passionate software developer building premium web experiences."}],"link":[{"rel":"icon","type":"image/png","href":"/favicon.png"}],"style":[],"script":[],"noscript":[],"title":"Mohamed Amine Fhal | Software Developer","htmlAttrs":{"lang":"en"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Mohamed Amine Fhal is a software developer building Vue, Nuxt, WebGL, browser extension, healthcare, event, and business web products."},{"name":"keywords","content":"Mohamed Amine Fhal, software developer, Vue developer, Nuxt developer, WebGL, Three.js, frontend developer, portfolio, Tunisia developer"},{"name":"author","content":"Mohamed Amine Fhal"},{"name":"robots","content":"index, follow, max-image-preview:large"},{"name":"theme-color","content":"#05070b"},{"property":"og:site_name","content":"Mohamed Amine Fhal Portfolio"},{"property":"og:type","content":"website"},{"property":"og:title","content":"Mohamed Amine Fhal | Software Developer"},{"property":"og:description","content":"Professional portfolio featuring Vue, Nuxt, WebGL, healthcare tools, event apps, browser utilities, and interactive projects."},{"property":"og:url","content":"https://medaminefh.github.io/"},{"property":"og:image","content":"https://medaminefh.github.io/og-image.png"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:title","content":"Mohamed Amine Fhal | Software Developer"},{"name":"twitter:description","content":"Vue, Nuxt, WebGL, business tools, browser extensions, and interactive software projects."},{"name":"twitter:image","content":"https://medaminefh.github.io/og-image.png"}],"link":[{"rel":"icon","type":"image/png","href":"/favicon.png"},{"rel":"canonical","href":"https://medaminefh.github.io/"},{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],"style":[],"script":[],"noscript":[],"title":"Software Developer Portfolio","titleTemplate":"%s | Mohamed Amine Fhal","htmlAttrs":{"lang":"en"}};
 
 const appRootTag = "div";
 
