@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "@tresjs/core": "^4.3.0",
+    "@tresjs/core": "5.8.1",
     "@tresjs/nuxt": "^5.6.1",
     "nuxt": "^4.4.8",
-    "three": "^0.170.0",
+    "three": "0.183.0",
     "vue": "latest",
     "vue-router": "latest"
   }

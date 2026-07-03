@@ -1,0 +1,9 @@
+{
+  "pid": 15928,
+  "startedAt": 1783084153188,
+  "command": "dev",
+  "cwd": "C:/Users/SBS/Desktop/workspace/medaminefh.github.io",
+  "port": 3001,
+  "hostname": "127.0.0.1",
+  "url": "http://127.0.0.1:3001"
+}

@@ -11,6 +11,11 @@ export default defineNuxtConfig({
 	devServer: {
 		port: 3001,
 	},
+	vite: {
+		resolve: {
+			dedupe: ["@tresjs/core", "three", "vue", "@vue/runtime-core", "@vue/runtime-dom"],
+		},
+	},
 	nitro: {
 		preset: "static",
 		prerender: {

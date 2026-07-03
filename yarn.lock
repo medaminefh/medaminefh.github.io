@@ -1605,15 +1605,6 @@
   dependencies:
     lib0 "^0.2.100"
 
-"@tresjs/core@^4.3.0":
-  version "4.3.6"
-  resolved "https://registry.npmjs.org/@tresjs/core/-/core-4.3.6.tgz"
-  integrity sha512-CCk4+jwbiTl7Hj3REZqweglUQQdA3cF29TqJ4dEWunaBPyfsAGLTlJExK5lGIS10ptJkr8DqPvHQT41iTIb0Yg==
-  dependencies:
-    "@alvarosabu/utils" "^3.2.0"
-    "@vue/devtools-api" "^6.6.3"
-    "@vueuse/core" "^12.5.0"
-
 "@tresjs/core@5.8.1":
   version "5.8.1"
   resolved "https://registry.npmjs.org/@tresjs/core/-/core-5.8.1.tgz"
@@ -6113,10 +6104,10 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
-three@^0.170.0, three@>=0.133:
-  version "0.170.0"
-  resolved "https://registry.npmjs.org/three/-/three-0.170.0.tgz"
-  integrity sha512-FQK+LEpYc0fBD+J8g6oSEyyNzjp+Q7Ks1C568WWaoMRLW+TkNNWmenWeGgJjV105Gd+p/2ql1ZcjYvNiPZBhuQ==
+three@0.183.0, three@>=0.133:
+  version "0.183.0"
+  resolved "https://registry.npmjs.org/three/-/three-0.183.0.tgz"
+  integrity sha512-G6SH2jfefIVa2YI4JL2VbgQhrrbp1A8dRc7lr3PW827kdVyaX2RgH6M5FmjmdVFLgSHppyg3OYOZdTfWElle+g==
 
 tiny-inflate@^1.0.3:
   version "1.0.3"
