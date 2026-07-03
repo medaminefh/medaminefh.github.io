@@ -43,6 +43,10 @@ export default defineNuxtConfig({
 						"Mohamed Amine Fhal, software developer, Vue developer, Nuxt developer, WebGL, Three.js, frontend developer, portfolio, Tunisia developer",
 				},
 				{ name: "author", content: "Mohamed Amine Fhal" },
+				{
+					name: "google-site-verification",
+					content: "txvgGYCybz_YnrYKlCOlvzaNe9uh1P0zZMUvmNxUPrQ",
+				},
 				{ name: "robots", content: "index, follow, max-image-preview:large" },
 				{ name: "theme-color", content: "#05070b" },
 				{ property: "og:site_name", content: "Mohamed Amine Fhal Portfolio" },
